@@ -1,6 +1,6 @@
 
 [2mRunning [22m30[2m tests using [22m2[2m workers[22m
-[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[90m×[39m[32m·[39m[32m·[39m[32m·[39m[90m×[39m[90m×[39m[90m×[39m[31mF[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[31mF[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m
+[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[90m×[39m[32m·[39m[32m·[39m[32m·[39m[90m×[39m[90m×[39m[31mF[39m[90m×[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[31mF[39m[32m·[39m[32m·[39m[32m·[39m
 
 [31m  1) [chromium] › tests/login.page.spec.ts:6:9 › Login Tests › The user can log in successfully [2m────[22m[39m
 
@@ -165,4 +165,4 @@
 [31m  2 failed[39m
 [31m    [chromium] › tests/login.page.spec.ts:6:9 › Login Tests › The user can log in successfully [2m─────[22m[39m
 [31m    [chromium] › tests/login.page.spec.ts:63:9 › Login Tests › The user can log in using Enter keyboard button [39m
-[32m  28 passed[39m[2m (42.1s)[22m
+[32m  28 passed[39m[2m (44.7s)[22m
