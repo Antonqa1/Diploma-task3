@@ -13,12 +13,12 @@ test.describe('Home page tests', () => {
 
     test('The user can filter products by price range', async ({ homePage }) => {
         await homePage.open();
-        await homePage.setPriceRange(100, 150);
+        await homePage.setPriceRange(100, 160);
         await expect(async () => {
             const priceValue = await homePage.productPrice.first().innerText();
             const price = priceValue.replace("$", "");
             expect(Number(price)).toBeGreaterThanOrEqual(100);
-            expect(Number(price)).toBeLessThanOrEqual(150);
+            expect(Number(price)).toBeLessThanOrEqual(160);
         }).toPass();
     });
 
