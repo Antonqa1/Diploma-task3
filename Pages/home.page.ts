@@ -84,17 +84,17 @@ export class HomePage extends BasePage {
         if (min > max) {
             throw new Error('min cannot be more than max');
         }
-        await this.priceRangeMin.click();
+        await this.priceRangeMin.click({ force: true });
         await this.page.keyboard.press('Home');
         for (let i = 0; i < min; i++) {
-            await this.page.keyboard.press('ArrowRight', { delay: 50 });
+            await this.page.keyboard.press('ArrowRight');
         }
-        await this.priceRangeMax.click();
+        await this.priceRangeMax.click({ force: true });
         await this.page.keyboard.press('Home');
         for (let i = 0; i < max; i++) {
-            await this.page.keyboard.press('ArrowRight', { delay: 50 });
+            await this.page.keyboard.press('ArrowRight');
         }
         await this.page.mouse.click(0, 0);
-        await this.page.waitForTimeout(1000);
+        await this.page.waitForLoadState('networkidle');
     }
 }
