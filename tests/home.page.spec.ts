@@ -11,7 +11,7 @@ test.describe('Home page tests', () => {
         await expect(homePage.cardProductName.first()).toContainText("Pliers");
     });
 
-    test('The user can filter products by price range', async ({ homePage }) => {
+    test.only('The user can filter products by price range', async ({ homePage }) => {
         await homePage.open();
         await homePage.setPriceRange(100, 160);
         await expect(async () => {

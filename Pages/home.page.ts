@@ -81,22 +81,20 @@ export class HomePage extends BasePage {
     }
 
     async setPriceRange(min: number, max: number) {
-        if (min > max) {
-            throw new Error('min cannot be more than max');
-        }
         const minClicks = Math.floor(min / 20);
         const maxClicks = Math.floor(max / 20);
-        await this.priceRangeMin.click({ force: true });
+        await this.priceRangeMin.focus();
         await this.page.keyboard.press('Home');
         for (let i = 0; i < minClicks; i++) {
             await this.page.keyboard.press('PageUp');
         }
-        await this.priceRangeMax.click({ force: true });
+        await this.priceRangeMin.click();
+        await this.priceRangeMax.focus();
         await this.page.keyboard.press('Home');
         for (let i = 0; i < maxClicks; i++) {
             await this.page.keyboard.press('PageUp');
         }
+        await this.priceRangeMax.click();
         await this.page.mouse.click(0, 0);
-        await this.page.waitForLoadState('networkidle');
     }
 }
