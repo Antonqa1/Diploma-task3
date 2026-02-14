@@ -87,13 +87,14 @@ export class HomePage extends BasePage {
         await this.priceRangeMin.click();
         await this.page.keyboard.press('Home');
         for (let i = 0; i < min; i++) {
-            await this.page.keyboard.press('ArrowRight', { delay: 2 });
+            await this.page.keyboard.press('ArrowRight', { delay: 50 });
         }
         await this.priceRangeMax.click();
         await this.page.keyboard.press('Home');
         for (let i = 0; i < max; i++) {
-            await this.page.keyboard.press('ArrowRight', { delay: 2 });
+            await this.page.keyboard.press('ArrowRight', { delay: 50 });
         }
         await this.page.mouse.click(0, 0);
+        await this.page.waitForTimeout(1000);
     }
 }
