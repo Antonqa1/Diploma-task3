@@ -130,6 +130,16 @@ jobs:
           report-directory: "./allure-report"
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Add GitHub Pages Link to Summary
+        if: always()
+        run: |
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "---" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📊 Full Report on GitHub Pages" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "🔗 **[Click here to view the complete Allure Report](https://antonqa1.github.io/diploma-task3/)**" >> $GITHUB_STEP_SUMMARY
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         if: always()
