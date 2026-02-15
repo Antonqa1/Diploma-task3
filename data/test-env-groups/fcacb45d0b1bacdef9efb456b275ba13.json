@@ -1,0 +1,1 @@
+{"id":"fcacb45d0b1bacdef9efb456b275ba13","fullName":"login.page.spec.ts:12:9","name":"Should show error messages if the user clicks log in button without submitting username and password empty fields","status":"passed","testResultsByEnv":{"default":"8807a27520d68210defd6f60e9e83fe2"}}
