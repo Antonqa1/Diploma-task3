@@ -5,4 +5,7 @@ export default defineConfig({
     output: "./allure-report",
     historyPath: "./allure-history.jsonl",
     appendHistory: true,
+    allureService: {
+        url: "https://antonqa1.github.io/diploma-task3/"
+    }
 });
