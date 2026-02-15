@@ -70,30 +70,23 @@ jobs:
 #          github_token: ${{ secrets.GITHUB_TOKEN }}
 #          publish_dir: ./allure-report
 #          publish_branch: gh-pages
-      - name: Generate Allure Report
-        if: always()
-        run: npx allure report generate allure-results --clean -o allure-report
 
-      - name: Deploy Allure Report to GitHub Pages
+      - name: Run Allure Action
+        uses: simple-elf/allure-report-action@master
         if: always()
+        with:
+          # В Allure 3 результаты по умолчанию в allure-results
+          allure_results: allure-results
+          # Папка, куда экшен положит готовый отчет
+          allure_report: allure-report
+          # Тот самый параметр, который заполнит колонку Reports
+          report_url: https://antonqa1.github.io/diploma-task3/
+
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
+        if: always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Деплоим именно ту папку, которую указали выше
           publish_dir: ./allure-report
           publish_branch: gh-pages
-
-      - name: Allure Report Summary
-        if: always()
-        uses: simple-elf/allure-report-action@v1.7
-        with:
-          allure_results: allure-results
-          report_url: https://antonqa1.github.io/diploma-task3/
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload Allure Results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-report-files
-          path: allure-report/
-          retention-days: 1
