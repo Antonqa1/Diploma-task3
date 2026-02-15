@@ -128,7 +128,7 @@ jobs:
         run: npx allure generate ./allure-results -o ./allure-report --clean
 
       - name: Run Allure Action
-        uses: allure-framework/allure-report@v0
+        uses: allure-framework/allure-action@v0
         if: always()
         with:
           report-directory: "./allure-report"
