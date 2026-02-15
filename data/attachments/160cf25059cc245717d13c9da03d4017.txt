@@ -1,8 +1,79 @@
 
 [2mRunning [22m30[2m tests using [22m2[2m workers[22m
-[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[90m×[39m[90m×[39m[90m×[39m[33m±[39m[32m·[39m[32m·[39m[31mF[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[90m×[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[90m×[39m[31mF[39m
+[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[90m×[39m[90m×[39m[90m×[39m[31mF[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[90m×[39m[90m×[39m[90m×[39m[31mF[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[32m·[39m[31mF[39m
 
-[31m  1) [chromium] › tests/login.page.spec.ts:6:9 › Login Tests › The user can log in successfully [2m────[22m[39m
+[31m  1) [chromium] › tests/home.page.spec.ts:14:9 › Home page tests › The user can filter products by price range [39m
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: >= [32m100[39m
+    Received:    [31m80.19[39m
+
+    Call Log:
+    - Test timeout of 30000ms exceeded
+
+    [0m [90m 20 |[39m             expect([33mNumber[39m(price))[33m.[39mtoBeGreaterThanOrEqual([35m100[39m)[33m;[39m
+     [90m 21 |[39m             expect([33mNumber[39m(price))[33m.[39mtoBeLessThanOrEqual([35m160[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 22 |[39m         })[33m.[39mtoPass()[33m;[39m
+     [90m    |[39m            [31m[1m^[22m[39m
+     [90m 23 |[39m     })[33m;[39m
+     [90m 24 |[39m
+     [90m 25 |[39m     test([32m'The user can reset the search results'[39m[33m,[39m [36masync[39m ({ homePage }) [33m=>[39m {[0m
+    [2m    at /home/runner/work/Diploma-task3/Diploma-task3/tests/home.page.spec.ts:22:12[22m
+
+[2m    Error Context: test-results/home.page-Home-page-tests--2f407-ter-products-by-price-range-chromium/error-context.md[22m
+
+[90m    Retry #1 [2m───────────────────────────────────────────────────────────────────────────────────────[22m[39m
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: >= [32m100[39m
+    Received:    [31m48.41[39m
+
+    Call Log:
+    - Test timeout of 30000ms exceeded
+
+    [0m [90m 20 |[39m             expect([33mNumber[39m(price))[33m.[39mtoBeGreaterThanOrEqual([35m100[39m)[33m;[39m
+     [90m 21 |[39m             expect([33mNumber[39m(price))[33m.[39mtoBeLessThanOrEqual([35m160[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 22 |[39m         })[33m.[39mtoPass()[33m;[39m
+     [90m    |[39m            [31m[1m^[22m[39m
+     [90m 23 |[39m     })[33m;[39m
+     [90m 24 |[39m
+     [90m 25 |[39m     test([32m'The user can reset the search results'[39m[33m,[39m [36masync[39m ({ homePage }) [33m=>[39m {[0m
+    [2m    at /home/runner/work/Diploma-task3/Diploma-task3/tests/home.page.spec.ts:22:12[22m
+
+[2m    Error Context: test-results/home.page-Home-page-tests--2f407-ter-products-by-price-range-chromium-retry1/error-context.md[22m
+
+[2m    attachment #2: [1mtrace[2m (application/zip) [2m─────────────────────────────────────────────────────────[2m[22m
+[2m    test-results/home.page-Home-page-tests--2f407-ter-products-by-price-range-chromium-retry1/trace.zip[22m
+[2m    Usage:[22m
+
+[2m        npx playwright show-trace test-results/home.page-Home-page-tests--2f407-ter-products-by-price-range-chromium-retry1/trace.zip[22m
+
+[2m    [2m────────────────────────────────────────────────────────────────────────────────────────────────[2m[22m
+
+[90m    Retry #2 [2m───────────────────────────────────────────────────────────────────────────────────────[22m[39m
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: >= [32m100[39m
+    Received:    [31m14.15[39m
+
+    Call Log:
+    - Test timeout of 30000ms exceeded
+
+    [0m [90m 20 |[39m             expect([33mNumber[39m(price))[33m.[39mtoBeGreaterThanOrEqual([35m100[39m)[33m;[39m
+     [90m 21 |[39m             expect([33mNumber[39m(price))[33m.[39mtoBeLessThanOrEqual([35m160[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 22 |[39m         })[33m.[39mtoPass()[33m;[39m
+     [90m    |[39m            [31m[1m^[22m[39m
+     [90m 23 |[39m     })[33m;[39m
+     [90m 24 |[39m
+     [90m 25 |[39m     test([32m'The user can reset the search results'[39m[33m,[39m [36masync[39m ({ homePage }) [33m=>[39m {[0m
+    [2m    at /home/runner/work/Diploma-task3/Diploma-task3/tests/home.page.spec.ts:22:12[22m
+
+[2m    Error Context: test-results/home.page-Home-page-tests--2f407-ter-products-by-price-range-chromium-retry2/error-context.md[22m
+
+[31m  2) [chromium] › tests/login.page.spec.ts:6:9 › Login Tests › The user can log in successfully [2m────[22m[39m
 
     Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m failed
 
@@ -82,7 +153,7 @@
 
 [2m    Error Context: test-results/login.page-Login-Tests-The-user-can-log-in-successfully-chromium-retry2/error-context.md[22m
 
-[31m  2) [chromium] › tests/login.page.spec.ts:63:9 › Login Tests › The user can log in using Enter keyboard button [39m
+[31m  3) [chromium] › tests/login.page.spec.ts:63:9 › Login Tests › The user can log in using Enter keyboard button [39m
 
     Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m failed
 
@@ -162,30 +233,8 @@
 
 [2m    Error Context: test-results/login.page-Login-Tests-The-7bcca-using-Enter-keyboard-button-chromium-retry2/error-context.md[22m
 
-[31m  3) [chromium] › tests/home.page.spec.ts:14:9 › Home page tests › The user can filter products by price range [39m
-
-    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
-
-    Expected: >= [32m100[39m
-    Received:    [31m14.15[39m
-
-    Call Log:
-    - Test timeout of 30000ms exceeded
-
-    [0m [90m 20 |[39m             expect([33mNumber[39m(price))[33m.[39mtoBeGreaterThanOrEqual([35m100[39m)[33m;[39m
-     [90m 21 |[39m             expect([33mNumber[39m(price))[33m.[39mtoBeLessThanOrEqual([35m160[39m)[33m;[39m
-    [31m[1m>[22m[39m[90m 22 |[39m         })[33m.[39mtoPass()[33m;[39m
-     [90m    |[39m            [31m[1m^[22m[39m
-     [90m 23 |[39m     })[33m;[39m
-     [90m 24 |[39m
-     [90m 25 |[39m     test([32m'The user can reset the search results'[39m[33m,[39m [36masync[39m ({ homePage }) [33m=>[39m {[0m
-    [2m    at /home/runner/work/Diploma-task3/Diploma-task3/tests/home.page.spec.ts:22:12[22m
-
-[2m    Error Context: test-results/home.page-Home-page-tests--2f407-ter-products-by-price-range-chromium/error-context.md[22m
-
-[31m  2 failed[39m
+[31m  3 failed[39m
+[31m    [chromium] › tests/home.page.spec.ts:14:9 › Home page tests › The user can filter products by price range [39m
 [31m    [chromium] › tests/login.page.spec.ts:6:9 › Login Tests › The user can log in successfully [2m─────[22m[39m
 [31m    [chromium] › tests/login.page.spec.ts:63:9 › Login Tests › The user can log in using Enter keyboard button [39m
-[33m  1 flaky[39m
-[33m    [chromium] › tests/home.page.spec.ts:14:9 › Home page tests › The user can filter products by price range [39m
-[32m  27 passed[39m[2m (1.1m)[22m
+[32m  27 passed[39m[2m (1.6m)[22m

@@ -1,1 +1,1 @@
-{"id":"902e00ff9ac71c15325b03cf320d8e7c","fullName":"login.page.spec.ts:33:9","name":"The user redirects to the Registration page if the user clicks Register your account link","status":"passed","testResultsByEnv":{"default":"1f7bad4d925a71c4a73eb3b631ada046"}}
+{"id":"902e00ff9ac71c15325b03cf320d8e7c","fullName":"login.page.spec.ts:33:9","name":"The user redirects to the Registration page if the user clicks Register your account link","status":"passed","testResultsByEnv":{"default":"5c60436f0cd3c428ed7ce6c6b3e0135b"}}
