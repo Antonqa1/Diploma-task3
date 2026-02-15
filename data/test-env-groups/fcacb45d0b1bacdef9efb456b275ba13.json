@@ -1,1 +1,1 @@
-{"id":"fcacb45d0b1bacdef9efb456b275ba13","fullName":"login.page.spec.ts:12:9","name":"Should show error messages if the user clicks log in button without submitting username and password empty fields","status":"passed","testResultsByEnv":{"default":"f6190974b6db2835ebec940618536d93"}}
+{"id":"fcacb45d0b1bacdef9efb456b275ba13","fullName":"login.page.spec.ts:12:9","name":"Should show error messages if the user clicks log in button without submitting username and password empty fields","status":"passed","testResultsByEnv":{"default":"db721f5fe9daedd4fd90782a113c581b"}}

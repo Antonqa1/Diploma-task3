@@ -1,1 +1,1 @@
-{"id":"a475fc1fe9c9d6811f4008221171fd63","fullName":"register.page.spec.ts:29:9","name":"Check that the user cannot enter caraters in the Phone field","status":"passed","testResultsByEnv":{"default":"77c5ee63eaa642b561316563bae14127"}}
+{"id":"a475fc1fe9c9d6811f4008221171fd63","fullName":"register.page.spec.ts:29:9","name":"Check that the user cannot enter caraters in the Phone field","status":"passed","testResultsByEnv":{"default":"84f19307c201606f16fbf9abe8bc4f2c"}}
