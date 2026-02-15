@@ -1,1 +1,1 @@
-{"id":"2f58a14609e101a111c006be4f563a3d","fullName":"register.page.spec.ts:51:9","name":"The error is displayed if the user enters an invalid email","status":"passed","testResultsByEnv":{"default":"f2fee752b5dc2273da15f6bea13aec3f"}}
+{"id":"2f58a14609e101a111c006be4f563a3d","fullName":"register.page.spec.ts:51:9","name":"The error is displayed if the user enters an invalid email","status":"passed","testResultsByEnv":{"default":"6d3ec70490a84f6fc656e7c35e573a4e"}}
