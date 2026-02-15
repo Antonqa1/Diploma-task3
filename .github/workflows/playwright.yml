@@ -56,6 +56,7 @@ jobs:
           report-directory: "./allure-report"
           github-token: ${{ secrets.GITHUB_TOKEN }}
           gh-pages: gh-pages
+          report-url: https://antonqa1.github.io/Diploma-task3/
       - name: Upload Allure Results
         uses: actions/upload-artifact@v4
         if: always()
