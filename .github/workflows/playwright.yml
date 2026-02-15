@@ -104,7 +104,7 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests
+      - name: Run Playwright tests with Allure
         run: |
           CHOICE="${{ github.event.inputs.test_folder }}"
           if [ -z "$CHOICE" ]; then CHOICE="all"; fi
@@ -113,19 +113,15 @@ jobs:
           
           case "$CHOICE" in
             "home-tests")
-              npx playwright test tests/home.page.spec.ts ;;
+              npx allure run -- npx playwright test tests/home.page.spec.ts ;;
             "login-tests")
-              npx playwright test tests/login.page.spec.ts ;;
+              npx allure run -- npx playwright test tests/login.page.spec.ts ;;
             "register-tests")
-              npx playwright test tests/register.page.spec.ts ;;
+              npx allure run -- npx playwright test tests/register.page.spec.ts ;;
             *)
-              npx playwright test --workers=2 ;;
+              npx allure run -- npx playwright test --workers=2 ;;
           esac
         continue-on-error: true
-
-      - name: Generate Allure Report
-        if: always()
-        run: npx allure generate ./allure-results -o ./allure-report --clean
 
       - name: Run Allure Action
         uses: allure-framework/allure-action@v0
