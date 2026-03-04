@@ -1,0 +1,71 @@
+name: Playwright Tests
+on:
+  pull_request:
+    branches: [ main, master, diploma-task3 ]
+  workflow_dispatch:
+    inputs:
+      test_folder:
+        description: 'What will we run?'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - home-tests
+          - login-tests
+          - register-tests
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      checks: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright tests
+        run: |
+          CHOICE="${{ github.event.inputs.test_folder }}"
+          if [ -z "$CHOICE" ]; then CHOICE="all"; fi
+
+          echo "Running tests for: $CHOICE"
+
+          case "$CHOICE" in
+            "home-tests")
+              npx allure run -- npx playwright test tests/home.page.spec.ts ;;
+            "login-tests")
+              npx allure run -- npx playwright test tests/login.page.spec.ts ;;
+            "register-tests")
+              npx allure run -- npx playwright test tests/register.page.spec.ts ;;
+            *)
+              npx allure run -- npx playwright test --workers=2 ;;
+          esac
+
+      - name: Run Allure Action
+        uses: allure-framework/allure-action@v0
+        if: always()
+        with:
+          report-directory: "./allure-report"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload Allure Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: allure-report-files
+          path: allure-report/
+          retention-days: 1
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
+          publish_branch: gh-pages

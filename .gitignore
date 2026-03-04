@@ -1,5 +1,5 @@
 .idea/
-.github/
+allure-results/
 
 # Playwright
 node_modules/
